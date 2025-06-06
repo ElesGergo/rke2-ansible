@@ -2,6 +2,7 @@
 - name: Debug rke2_kubernetes_api_server_host value
   debug:
     msg: "rke2_kubernetes_api_server_host is {{ rke2_kubernetes_api_server_host }}"
+  ignore_errors: true
 
 - name: Wait for remote k8s apiserver
   ansible.builtin.wait_for:
